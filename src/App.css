@@ -1,0 +1,275 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Oswald&family=Poppins&family=Roboto:wght@500&display=swap');
+
+* {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+.app__header-image {
+    object-fit: contain;
+    margin: auto;
+}
+
+.app__header {
+    background-color: white;
+    padding: 10px;
+    padding-left: 10%;
+    padding-right: 10%;
+    border-bottom: 1px solid lightgrey;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.app {
+    background-color: #fafafa;
+}
+
+.app__signup {
+    display: flex;
+    flex-direction: column;
+}
+
+.app__posts {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.posts__container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.logo__container {
+    display: flex;
+    align-items: center;
+}
+
+.auth__container {
+    max-width: 500px;
+}
+
+.preview__image {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.search__bar {
+    background-color: #fafafa;
+    border-radius: 5px;
+    padding: 4px 4px;
+    height: 35px;
+    width: 300px;
+    border: 1px solid lightgray;
+    margin: auto;
+}
+
+.options {
+    display: flex;
+    gap: 20px;
+    font-size: 24px;
+}
+
+.options img {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.auth__options {
+    margin: auto;
+    font-size: 24px;
+    display: flex;
+    gap: 24px;
+    transition: all 400ms ease;
+}
+
+.auth__options:hover {
+    font-size: 28px
+}
+
+
+.icon {
+    cursor: pointer;
+}
+
+.upload {
+    text-align: center;
+}
+
+.logout {
+    padding-block: 10px;
+    width: 100px;
+    position: fixed;
+    top: 70px;
+    right: 10%;
+    background-color: #ffffff;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.logout__option {
+    width: 100%;
+    padding: 10px;
+    transition: all 400ms ease;
+    text-align: center;
+    cursor: pointer;
+}
+
+.logout__option:hover {
+    background-color: lightgray;
+}
+
+@media screen and (max-width:768px) {
+
+    .auth__options,
+    .search__bar,
+    .suggested {
+        display: none;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .search__bar {
+        display: none;
+    }
+}
+
+.tabs button{
+    border-radius: 8px;
+    height: 30px;
+}
+h1{
+    font-size: 24px;
+  }
+  h2{
+    font-size: 32px;
+  }
+  h3{
+    font-size: 30px;
+  }
+  h4{
+    font-size: 16px;
+  }
+  .logotext{
+    font-size: 18px;
+  }
+  .sidenav{
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 19.6vw;
+    padding-top: 4.79vh;
+    padding-left: 27px;
+    border-right: 1px solid #D9D9D9;
+  }
+  .topnav{
+    height: 12.21vh;
+    padding-right: 4.89vw;
+    display: flex;
+    align-items: center;
+  
+  }
+  
+  .btn-primary{
+    background-color: navy;
+    border-radius: 10px;
+    color: white;
+    height:45px;
+  }
+  
+  .input-div{
+    height: 50px;
+    border: 2px solid #D9D9D9;
+    border-radius: 30px;
+    padding-left: 35px;
+  }
+  input:focus{
+    border: none;
+    outline: none;
+  }
+  .desc{
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  .garb_item{
+border-radius: 10px;  
+overflow: hidden;
+  }
+  .waste_locay{
+    height: 70px;
+    border: 1px solid #D9D9D9;
+    border-radius: 8px;
+    width: 700px;
+  }
+  .waste_image{
+    height: 100px;
+    border: 1px dotted navy;
+    border-radius: 8px;
+    width: 700px;
+  }
+  
+  .upload_btn{
+    width: 700px;
+    height: 55px;
+    background-color: navy;
+    border-radius: 8px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .selected{
+    text-decoration: none;
+    background-color: navy;
+    color: white;
+    height: 6vh;
+    width: 16.53vw;
+    align-items: center;
+    border-radius: 8px;
+    display: flex;
+    font-size: 16px;
+    padding-top: 5px;
+  }
+
+  .input{
+    border: 1px solid #d9d9d9;
+    padding: 5px;
+    border-radius: 6px;
+  }
+
+  .urgency{
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+  }
+
+  .bg-red{
+    background-color: red;
+  }
+
+  .bg-orange{
+    background-color: orange;
+  }
