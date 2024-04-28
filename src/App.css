@@ -273,3 +273,14 @@ overflow: hidden;
   .bg-orange{
     background-color: orange;
   }
+
+  .logout{
+    color: red;
+    text-decoration: underline;
+    position: absolute;
+    bottom: 20px;
+  }
+
+  footer{
+    border-top: 1px solid black;
+  }

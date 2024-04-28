@@ -2,7 +2,7 @@ import React from 'react'
 
 const Pending = ({all}) => {
   return (
-    <section className='flex flex-wrap justify-center gap-[20px] mt-[30px] garb pb-[50px]'>
+    <section className='flex flex-wrap justify-left gap-[20px] mt-[30px] garb pb-[50px]'>
         {
             all.map((single) => { return (
                 <div className="garb_item shadow-md">
@@ -15,10 +15,8 @@ const Pending = ({all}) => {
                     <div className='flex flex-col space-y-1'>
                         <div className='flex flex-row items-center space-x-[4px] justify-end'>
                             <span className='text-[11px]'>{single.urgency}</span>
-                            <span className={`urgency ${single.urgency < 5 ? 'bg-orange' :  'bg-red'}`}></span>
+                            <span className={`urgency ${single.urgency == 'high' && 'bg-red'} ${single.urgency == 'medium' && 'bg-orange'} ${single.urgency == 'low' && 'bg-primary-green'}`}></span>
                         </div>
-
-                        <span className='font-semibold'>Cost: 0.00</span>
                     </div>
                 </div>
             </div>

@@ -7,15 +7,24 @@ import { useStateContext } from '../contexts/Context'
 import './ImageUpload.css'
 import RootLayout from './layout'
 import { useNavigate } from 'react-router-dom'
+import Select from 'react-select'
+import { Form } from 'react-bootstrap'
 
 const ImageUpload = () => {
     const { currentUser } = useStateContext();
-    const [roomNo, setRoomNo] = useState('')
+    const [roomNo, setRoomNo] = useState('');
+    const [hostelName, setHostelName] = useState('')
     const [description, setDescription] = useState('')
     const [urgency, setUrgency] = useState('')
     const [cost, setCost] = useState('')
     const [image, setImage] = useState(null)
     const navigate = useNavigate();
+
+    const options = [
+        { value: 'high', label: 'High' },
+        { value: 'medium', label: 'Medium' },
+        { value: 'low', label: 'Low' }
+    ]
 
 
     //    const [url, setUrl] = useState('')
@@ -48,9 +57,9 @@ const ImageUpload = () => {
                         username: currentUser.displayName,
                         imageUrl: url,
                         description: description,
-                        cost: cost,
                         urgency: urgency,
-                        roomNo: roomNo
+                        roomNo: roomNo,
+                        hostelName: hostelName
                     })
                     navigate('/home')
                     setImage(null)
@@ -63,12 +72,22 @@ const ImageUpload = () => {
       <>
         <RootLayout />
         <div className='image__upload'>
-          <h2 className='font-semibold'>Report Problem</h2>
-            <input type='text' className='input' placeholder='Room Number' onChange={(e) => setRoomNo(e.target.value)} value={roomNo} />
+            <h2 className='font-semibold'>Report Problem</h2>
+            <input type='text' className='input' placeholder='Room / Office Number' onChange={(e) => setRoomNo(e.target.value)} value={roomNo} />
+            <input type='text' className='input' placeholder='Hostel / Office Name' onChange={(e) => setHostelName(e.target.value)} value={hostelName} />
             <input type='text' className='input' placeholder='Description' onChange={(e) => setDescription(e.target.value)} value={description} />
-            <input type='number' className='input' placeholder='Urgency Level' onChange={(e) => setUrgency(e.target.value)} value={urgency} />
-            <input type='text' className='input' placeholder='Cost' onChange={(e) => setCost(e.target.value)} value={cost} />
-
+            <Form.Group controlId="formBasicSelect">
+                <Form.Label>Select Urgency Level</Form.Label>
+                <Form.Control as="select" 
+                    onChange={e => {
+                        setUrgency(e.target.value);
+                      }}
+                >
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                </Form.Control>
+            </Form.Group>
 
             <div className='mt-[33px]'>
             <p className='font-semibold text-sm text-secondary-text'>Add a picture of the damage</p>

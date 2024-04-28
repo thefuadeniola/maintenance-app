@@ -5,6 +5,7 @@ import Home from './Home';
 import Signup from './Components/Signup';
 import Login from './Components/Login';
 import Report from './Components/Report';
+import Feedback from './Components/Feedback';
 
 export default function App() {
 
@@ -20,6 +21,7 @@ export default function App() {
                             <Route index element={<Login />} />
                             <Route path='/signup' element={<Signup />} />
                             <Route path='/report' element={<Report />} />
+                            <Route path='/feedback' element={<Feedback />} />
                         </Route>
                     </Routes>
                 </Container>

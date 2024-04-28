@@ -30,7 +30,7 @@ export default function Login() {
 
     return (
         <div className='auth__container'>
-            <Card>
+            <Card> 
                 <Card.Body>
                     <div className='text-center mb-4'>
                         <h1 className='font-semibold text-base'>E-Maintenance Portal</h1>

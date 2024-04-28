@@ -29,8 +29,12 @@ export const AuthProvider = ({ children }) => {
         }
     };
 
-    const login = (email, password) => {
-        signInWithEmailAndPassword(auth, email, password)
+    const login = async (email, password) => {
+        try{
+            await signInWithEmailAndPassword(auth, email, password).catch((err) => alert('User not found. Please create an account before signing in'))
+        } catch(err) {
+            alert('User not found. Please create an account before signing in')
+        }
     }
 
     const logout = () => {
@@ -59,3 +63,4 @@ export const AuthProvider = ({ children }) => {
     )
 }
 export const useStateContext = () => useContext(AuthContext)
+
