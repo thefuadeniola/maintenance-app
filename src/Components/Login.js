@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react'
 import { Form, Button, Card, Alert } from 'react-bootstrap'
 import { useStateContext } from '../contexts/Context';
 import { Link, Navigate, useNavigate } from 'react-router-dom'
+import logo from '../assets/crawford-univeristy-nigeria.png'
 
 export default function Login() {
     const { currentUser, login } = useStateContext();
@@ -32,7 +33,8 @@ export default function Login() {
         <div className='auth__container'>
             <Card> 
                 <Card.Body>
-                    <div className='text-center mb-4'>
+                    <div className='flex flex-col items-center justify-center mb-4'>
+                        <img src={logo} alt='logo' className='logo' />
                         <h1 className='font-semibold text-base'>E-Maintenance Portal</h1>
                     </div>
                     {error && <Alert variant='danger'>{error}</Alert>}

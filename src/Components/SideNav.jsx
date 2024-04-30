@@ -1,10 +1,10 @@
 import React from 'react'
-import logo from '../assets/icons/logo.svg'
 import { sideNavLinks, bottomNav } from '../data'
 import { NavLink } from 'react-router-dom'
 import '../App.css'
 import { useNavigate } from 'react-router-dom'
 import { useStateContext } from '../contexts/Context'
+import logo from '../assets/crawford-univeristy-nigeria.png'
 
 
 const SideNav = () => {
@@ -19,11 +19,12 @@ const SideNav = () => {
 
   return (
     <div className = 'hidden md:block sidenav bg-secondary-bg relative'>
-        <div className='flex flex-row items-center gap-[5px]'>
+        <div className='flex flex-col items-center gap-[15px]'>
+          <img src={logo} alt='logo' className='logo' />
           <h1 className='text-base font-semibold'>E-Maintenance Portal</h1>
         </div>
 
-        <div className='mt-[5.3vh] flex flex-col space-y-[4.07vh]'>
+        <div className='mt-[5.3vh] flex flex-col space-y-[4.07vh] pl-[24px]'>
             {
               sideNavLinks.map((link) => (
                 <NavLink key={link.name} to={link.link} 
