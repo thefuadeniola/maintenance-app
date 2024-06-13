@@ -31,6 +31,7 @@ export default function Login() {
 
     return (
         <div className='auth__container'>
+            <div>
             <Card> 
                 <Card.Body>
                     <div className='flex flex-col items-center justify-center mb-4'>
@@ -56,6 +57,8 @@ export default function Login() {
             </Card>
             <div className='w-100 text-center mt-2'>
                 Don't have an account? <Link to='/signup'>Signup</Link>
+            </div>
+
             </div>
         </div>
     )

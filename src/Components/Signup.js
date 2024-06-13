@@ -35,6 +35,7 @@ export default function Signup() {
 
     return (
         <div className='auth__container'>
+            <div>
             <Card>
                 <Card.Body>
                     <div className='text-center mb-4'>
@@ -76,6 +77,8 @@ export default function Signup() {
             </Card>
             <div className='w-100 text-center mt-2'>
                 Already have an account? <Link to='/'>Login</Link>
+            </div>
+
             </div>
         </div>
     )
